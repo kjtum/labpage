@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!-- 互換性とアクセシビリティのために<html>タグの「lang=""」属性をセット。
+     HTMLタグのほかの属性については下記ページを参考に。
+     参考: http://www.w3.org/TR/html-markup/global-attributes.html -->
+<html lang="ja">
+ 
+<head>
+ 
+<!-- IE8+に対して「IE=edge」と指定することで、
+     利用できる最も互換性の高い最新のエンジンを使用するよう指示できます。
+     参考: https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+<!-- パフォーマンスのために使用する文字のエンコーディングを記述。
+     最初のオプションとしてHTTPヘッダで指定し、
+     HTTPヘッダとmetaタグでの指定が同じであることを確認。
+     参考: https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly -->
+<meta charset="utf-8"> 
+ 
+<!-- ページのタイトルを記述 -->
+<title>研究内容</title>
+ 
+<!-- Scontent属性にページの紹介文を記述 -->
+<meta name="description" content="Explanation of research">
+ 
+<!-- content属性にページの著者情報を記述 -->
+<meta name="author" content="K. Tatsumi">
+ 
+<!-- モバイル端末への対応、
+     ページをビューポートの幅に合わせてレンダリング（Android, iOS6以降）
+     ズームを許可しない設定「user-scalable=no」は加えない -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- スタイルシートはできるだけ早くレンダリングされるため、
+     HTMLドキュメントの上の方に記述
+     href属性にスタイルシートファイルのURIを記述 -->
+<link rel="stylesheet" href="test.css">
+ 
+<!-- IE8以下用に2つのスクリプトを記述
+     html5shiv.js: IE8以下にHTML5の要素を認識するようにさせる
+     respond.js: IE8以下にMedia Queriesの代替え機能を提供 -->
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+ 
+<!-- href属性にファビコンファイルのURIを記述 -->
+<link rel="shortcut icon" href="">
+ 
+<!-- コメントアウトしてあるコードは、iOS/Android用のアイコン指定 -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="196x196" href="">
+<link rel="apple-touch-icon" sizes="152x152" href="">
+ 
+<!-- スクリプトでブロッキングを起こさないものはここに記述
+     可能であれば「async（文書の読み込みが完了した時点でスクリプトを実行）」を使用
+     例: <script src="" async></script> -->
+<script src="/cdn-cgi/apps/head/4I4lfnVuEFW3GRSoEeThpLSjKcg.js"></script><link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="fixed-navigation-bar.css">
+<link rel="shortcut icon" href="http://sixrevisions.com/favicon.ico">
+</head>
+<body>
+ 
+<!-- コンテンツを配置 -->
+
+<nav class="fixed-nav-bar">
+<div id="menu" class="menu">
+<a class="sitename" href="index.html">Menu</a>
+
+<a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
+<ul class="menu-items">
+<li><a href="http://se.eei.eng.osaka-u.ac.jp/eeise005/subindex.html">担当授業・経歴</a></li>
+<li><a href="https://researchmap.jp/read0054794">研究業績</a></li>
+<li><a href="https://www.otemon.ac.jp/index.html">追手門学院大学TOP</a></li>
+</ul>
+</div>
+</nav>
+ 
+<section class="content">
+<div class="description">
+<h1>巽啓司のページ</h1>
+<p class="summary">システム工学，数理・知能情報学，ソフトコンピューティング，計算科学等の境界領域を対象とし，
+大規模で複雑なシステムの計画・運用に必要な「システム最適化、意思決定支援」に関する基礎理論とその応用としての
+「物事の合理的な決定」について研究しています</p>
+<!-- <a class="button" href="http://se.eei.eng.osaka-u.ac.jp/</a>-->
+<!-- <a class="button" href="//github.com/sixrevisions/fixed-navigation-bar">View Source on GitHub</a> -->
+</div>
+</section>
+
+<section class="some-related-articles">
+<h1>最近の研究テーマ例</h1>
+<p>集合知とカオス力学系，数理計画法の多点探索法への拡張を用いた大域的最適化問題の解法の研究や，
+機械学習法・最適化手法の現実問題への適用などを行っています．
+</p>
+
+<p><center><img src="opt.png" height="200px"></center></p>
+
+<h2>1. 大域的最適化問題に対する数理的手法とメタヒューリスティック解法の融合</h2>
+<p>
+通信・情報・制御，金融，経済，生物，情報学など幅広い領域で必要とされる意思決定・最適化問題の求解法は，SDGsの達成のための基盤技術
+としてもそのニーズは増している．本研究では，特に，求解の困難な，多数の局所的最適解（真の解ではなく，その周辺では最適な解）を多数含む，
+決定変数（ユーザが決定したい内容）が連続変数として与えられる大域的最適化問題を対象とした，近似的な求解法に焦点をあてる．
+</p>
+
+<p><center><img src="opt0.png" height="380px"></center></p>
+<p>
+最適化手法には，厳密な求解や，解への大域的収束性（必ず何らかの最適解が求まる性質）など理論的な保証のある求解を，主に単点探索で目指
+す数値計画法と，現実的な時間内に様々な簡易な方法で多点探索点を更新し近似解（必ずしも最適ではないがユーザが許容可能な解）を求めること
+を目指すメタヒューリスティック解法に大別できる．これら2つの手法は，根本的な求解戦略が異なるため，その融合的な手法の研究はあまり行われ
+ていない．本テーマでは，多数の探索点を使用しつつ，多点探索点での情報を有効に利用して数理計画的探索を効率化・高速化することを目的とした，融合的
+な求解法の開発を行う．特に，数理計画法において，最小化すべき目的関数の近似2次導関数情報を利用することで，求解を早める単点準ニュートン法
+に着目し，探索点の情報共有により２次導関数情報の近似精度を高め，局所解への収束性を高速化する方法を開発する．
+</p>
+<p><center><img src="テーマ2.png" height="300px"></center></p>
+
+
+<h2>2. 大型インフラ構造物に対するボトムアップ型の説明可能な識別器構成法の開発</h2>
+<p>
+近年，建設業界では，労働力不足解消のため，人工知能技術の導入による自動化・知能化が進められている．本研究では，ある１つの種類の大型
+インフラ構造物を構築する際，熟練者による判断が必要となる補強度決定の問題に着目し，この決定を自動的に行う機械学習手法の開発を行う．
+</p>
+<p><center><img src="t1.png" height="550px"></center></p>
+
+<p>
+対象とする構造物の建設時補強度合は，各建設区間を観測し得られた危険度チェック項目（観測データ）やその区間の自然状況に基づいて決定する．
+その入出力間には単調性の性質があり，また，一部不整合とも解釈できる入出力関係性も含まれている．この建設は公共工事であるため補強度決定
+方法には説明可能性が高い必要があり，単調性を反映しつつ不整合を解消することが望ましい．本研究では，この問題を，現在とそれ以前に建設さ
+れた建設区間での観測データ・自然状況を用いて補強度合を決定する時系列認識問題として定式化，オープンデータを用いた構造物建設地域の地層
+状況追加による情報の精密化の提案を行う．また，適用する機械学習法として，出力の関係性が容易に解釈可能な多クラス線形サポートベクトル
+マシン（SVM）の多クラスモデルの提案と適用，さらに区分的線形SVMへの拡張，時系列処理により適したフィードバック機構を持つ
+リカレントニューラルネットワークの適用といった開発を行う．
+</p>
+<p><center><img src="LS.png" height="800px"></center></p>
+<dl><dt>科学研究費（学術研究助成基金） 基盤研究（C）</dt>
+<dd>「ボトムアップ型の説明可能な識別器構成法の開発と社会インフラ設計問題への適用」
+研究代表者：巽 啓司，研究分担者：尹 禮分（ 関西大学, 教授）期間：令和5年4月～令和9年3月</dd>
+</dl>
+<!--これらの研究により、現実問題のモデル化・定式化技術や，各種AI,機械学習手法の現実問題への適用，その発展手法の開発方法が習得できる．-->
+<p><a class="button-dark" href="http://se.eei.eng.osaka-u.ac.jp/eeise005/subindex.html">巽啓司のサブページ</a>
+</section>
+
+<!-- スクリプトでブロッキングを起こすものはここに記述
+     ブロッキングを起こす原因としては、
+     CSSのセレクタ操作（IE）、負荷の高いDOM操作、多数のスクリプトなど -->
+<!-- SCRIPTS -->
+<!-- 例: <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+</body>
+</html>
